@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .clearfix::after{
@@ -10,38 +12,91 @@
     clear: both;
 }
 
+a{
+    text-decoration: none;
+    color: gray;
+}
+
 /* STRUTTURA */
 
+.colonna{
+    width: 200px;
+    height: calc(100vh - 80px);
+    background-color: brown;
+    float: left;
+}
+
 header{
-    width: 100vw;
+    width: calc(100% - 200px);
     height: 60px;
-    background-color: pink;
+    background-color: green;
+    float: left;
 }
 
 main{
-    width: 100vw;
-    height: (100vh - 140px);
-    background-color: blue;
-}
-
-main .menu{
-    width: 200px;
-    float: left;
-    height: calc(100vh - 140px);
-    background-color:firebrick;
-}
-
-main .content{
-    width: calc(100vw - 200px);
+    width: calc(100% - 200px);
     height: calc(100vh - 140px);
     float: left;
-    background-color: forestgreen;
+    background-color: black;
     overflow: scroll;
 }
 
 footer{
-    height: 80px;
-    display: inline-block;
     width: 100vw;
-    background-color:gold;
+    height: 80px;
+    background-color: red;
+    float: left;
+}
+
+/* COLONNA */
+
+.menu{
+    position: relative;
+    height: 100%;
+}
+
+.colonna img{
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.colonna .logo img{
+    height: 40px;
+    margin: 5px 0px 15px 15px;
+}
+
+.colonna ul{
+    margin-left: 15px;
+    list-style: none;
+}
+
+.colonna .top-menu li{
+    margin: 7px 0px;
+}
+
+.colonna .main-menu li{
+    margin: 10px 0px;
+}
+
+.colonna p,h3{
+    margin: 5px 15px;
+}
+
+.colonna .menu .sotto-menu{
+    position: absolute;
+    bottom: 5px;
+   
+}
+
+
+/* HEADER */
+
+.btn-upgrade{
+    float: right;
+    color: honeydew;
+    padding: 10px 35px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 10px;
 }
