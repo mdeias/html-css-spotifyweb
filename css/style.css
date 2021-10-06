@@ -38,6 +38,9 @@ p{
     background-color: black;
     float: left;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container main{
@@ -75,7 +78,9 @@ footer{
 /* COLONNA */
 
 .menu{
-    height: 100%;
+    height: 90%;
+    overflow: hidden;
+    margin-left: 20px;
 }
 
 .colonna img{
@@ -86,17 +91,11 @@ footer{
 
 .colonna .logo img{
     height: 40px;
-    margin: 5px 0px 15px 15px;
+    margin: 8px 0px 15px 20px;
 }
 
 .colonna ul{
-    margin-left: 15px;
     list-style: none;
-}
-
-.colonna .main-menu{
-    height: 68%;
-    overflow: hidden;
 }
 
 .colonna .top-menu li{
@@ -105,21 +104,50 @@ footer{
 
 .colonna .main-menu li{
     margin-bottom: 15px;
-    overflow: hidden;
 }
 
 .colonna .main-menu>h3{
-    color: white;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
-.colonna p, h3{
-    margin: 5px 15px;
+.colonna .main-menu .playlist a{
+    font-size: 14px;
 }
 
-.colonna .menu .sotto-menu{
-    height: 40px ; 
+.colonna .main-menu h3 a{
+    color: white;
+}
+
+.sotto-menu{
+    margin-left: 20px;
+}
+
+.colonna .sotto-menu p a img{
+    height: 14px;
+}
+
+.colonna .sotto-menu h3 a img{
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.colonna .sotto-menu .line{
+    width: 85%;
+    height: 1px;
+    background-color: gray;
+    margin: 10px 0px 10px 5px;
+}
+
+.colonna .sotto-menu h3 a{
+    color: white;
+    font-size: 13px;
+}
+
+.colonna p, h3{
+    margin: 5px;
 }
 
 .colonna .fa-plus{
@@ -145,6 +173,10 @@ footer{
 }
 
 /* CONTENUTO */
+
+.contenuto .brani nav a{
+    font-size: 13px;
+}
 
 .contenuto .brani ul{
     list-style: none;
@@ -176,19 +208,18 @@ footer{
 .contenuto .consigliati, .popolari{
     width: 34%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-
 .contenuto .box{
     width: 14vw;
-    display: inline-block;
     text-align: center;
 }
 
 .contenuto .box img{
     width: 12vw;
+    cursor: pointer;
 }
 
 .contenuto .box h3{
