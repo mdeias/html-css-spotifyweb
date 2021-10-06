@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-size: 12px;
+    font-size: 11px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -12,46 +12,66 @@
     clear: both;
 }
 
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
 a{
     text-decoration: none;
     color: gray;
 }
 
+a:hover{
+    color: honeydew;
+}
+
+p{
+    color: gray;
+}
+
 /* STRUTTURA */
 
-.colonna{
+.container .colonna{
     width: 200px;
-    height: calc(100vh - 80px);
-    background-color: brown;
+    height: 100%;
+    background-color: black;
     float: left;
 }
 
-header{
+.container main{
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+.call-to-action{
+    position: fixed;
+    top: 0px;
+    right: 0px;
     width: calc(100% - 200px);
     height: 60px;
-    background-color: green;
-    float: left;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-main{
+main .contenuto{
     width: calc(100% - 200px);
-    height: calc(100vh - 140px);
+    height: 100%;
     float: left;
-    background-color: black;
-    overflow: scroll;
+    background-color: #141922;
+    overflow: auto;
+    padding-top: 90px;
 }
 
 footer{
-    width: 100vw;
+    width: 100%;
     height: 80px;
-    background-color: red;
     float: left;
+    background-color: #272828;
 }
 
 /* COLONNA */
 
 .menu{
-    position: relative;
     height: 100%;
 }
 
@@ -71,26 +91,46 @@ footer{
     list-style: none;
 }
 
+.colonna .main-menu{
+    height: 70%;
+    overflow: hidden;
+}
+
 .colonna .top-menu li{
     margin: 7px 0px;
 }
 
 .colonna .main-menu li{
-    margin: 10px 0px;
+    margin-bottom: 15px;
+    overflow: hidden;
 }
 
-.colonna p,h3{
+.colonna .main-menu>h3{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.colonna p, h3{
     margin: 5px 15px;
 }
 
 .colonna .menu .sotto-menu{
-    position: absolute;
-    bottom: 5px;
-   
+    height: 40px ; 
+}
+
+.colonna .fa-plus{
+    padding: 6px;
+    background-color: gray;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 
-/* HEADER */
+/* CALL TO ACTION */
 
 .btn-upgrade{
     float: right;
@@ -99,4 +139,48 @@ footer{
     border: 2px solid white;
     border-radius: 20px;
     margin: 10px;
+}
+
+/* CONTENUTO */
+
+.contenuto .brani ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.contenuto .brani ul li{
+    margin-right: 20px;
+}
+
+.contenuto .brani h1{
+    margin: 30px 0px 20px 15px;
+    font-size: 25px;
+    color: white;
+}
+
+.contenuto .recenti{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenuto .consigliati{
+    display: flex;
+    justify-content: start;
+}
+
+
+.contenuto .box{
+    display: inline-block;
+    text-align: center;
+}
+
+.contenuto .box img{
+    width: 12vw;
+    height: 12vw;
+}
+
+.contenuto .box h3{
+    font-size: 15px;
+    color: white;
 }
