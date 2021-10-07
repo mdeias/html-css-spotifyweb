@@ -80,7 +80,6 @@ footer{
 .menu{
     height: 90%;
     overflow: hidden;
-    margin-left: 20px;
 }
 
 .colonna img{
@@ -94,21 +93,35 @@ footer{
     margin: 8px 0px 15px 20px;
 }
 
+.colonna .logo-piccolo img{
+    display: none;
+    height: 30px;
+    margin: 8px 10px 15px 10px;
+}
+
 .colonna ul{
     list-style: none;
 }
 
+.colonna .menu .top-menu ul #border-green{
+    margin-left: 7px;
+    padding-left: 10px;
+    border-left: 3px solid greenyellow;
+}
+
 .colonna .top-menu li{
-    margin: 7px 0px;
+    margin: 7px 0px 7px 20px;
 }
 
 .colonna .main-menu li{
     margin-bottom: 15px;
+    margin-left: 20px;
 }
 
 .colonna .main-menu>h3{
     margin-top: 15px;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 .colonna .main-menu .playlist a{
@@ -138,7 +151,7 @@ footer{
     width: 85%;
     height: 1px;
     background-color: gray;
-    margin: 10px 0px 10px 5px;
+    margin: 10px 0px 10px 0px;
 }
 
 .colonna .sotto-menu h3 a{
@@ -147,7 +160,7 @@ footer{
 }
 
 .colonna p, h3{
-    margin: 5px;
+    margin: 5px 0px;
 }
 
 .colonna .fa-plus{
@@ -182,10 +195,20 @@ footer{
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .contenuto .brani ul li{
     margin-right: 20px;
+}
+
+.contenuto .brani ul li .green-line{
+    width: 40px;
+    height: 3px;
+    margin: 3px auto;
+    background-color:greenyellow;
+    border: 1px solid greenyellow;
 }
 
 .contenuto .brani h1{
@@ -199,31 +222,35 @@ footer{
 }
 
 .contenuto .recenti{
+    width: (100% - 10px);
     margin-top: 35px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.contenuto .consigliati, .popolari{
-    width: 34%;
+    margin-left: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+.contenuto .consigliati, .popolari{
+    margin-left: 15px;
+    width: (100% - 15px);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
 .contenuto .box{
-    width: 14vw;
+    width: 15%;
     text-align: center;
+    margin-right: 15px;
 }
 
 .contenuto .box img{
-    width: 12vw;
+    width: 100%;
     cursor: pointer;
 }
 
 .contenuto .box h3{
-    font-size: 15px;
+    font-size: 14px;
     color: white;
 }
 
@@ -241,13 +268,10 @@ footer .left, .right{
     align-items: center;
 }
 
-footer .left, .right{
-    width: 210px;
-}
-
 footer .center{
     width: 35%;
     height: 70px;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -260,12 +284,14 @@ footer .left, .right{
 }
 
 footer img{
-    height: 50px;   
+    height: 50px;
+    margin: 0px 10px;  
 }
 
 footer h4{
     color: white;
     font-size: 13px;
+    margin-right: 10px;
 }
 
 footer .icone{
@@ -283,6 +309,7 @@ footer .icone-sinistra i{
 footer .right i{
     font-size: 13px;
     color: white;
+    margin-right: 10px;
 }
 
 footer .right .volume{
@@ -325,5 +352,114 @@ footer .center .fa-play-circle{
     align-items: center;
 }
 
+footer .center p{
+    margin: 0px 10px;
+}
 
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width:576px){
+
+    .container main .colonna{
+        width: 50px;
+    }
+    .container main .contenuto{
+        width: calc(100% - 50px);
+    }
+
+    .call-to-action{
+        width: calc(100% - 50px);
+        float: left;
+    }
+
+    .container main .colonna .main-menu{
+        display: none;
+    }
+
+    .container main .colonna .logo{
+        display: none;
+    }
+
+    .container main .colonna .menu .top-menu ul li a{
+        visibility: hidden;
+    }
+
+    .container main .colonna .menu .top-menu ul li{
+        margin-left: 12px;
+    }
+
+    .container main .colonna .menu .top-menu ul li a img{
+        visibility: visible;
+    }
+
+    .container main .colonna .menu .top-menu ul #border-green{
+        border-left: none;
+        padding-left: 0px;
+        margin-left: 12px;
+    }
+
+    .container main .colonna .logo-piccolo img{
+        display: inline-block;
+    }
+
+    .container main .colonna .sotto-menu{
+        margin-left: 15px;
+    }
+
+    .container main .colonna .sotto-menu p, h3{
+        height: 20px;
+    }
+
+    .container main .colonna .sotto-menu p{
+        margin-left: 2px;
+    }
+
+    .container main .colonna .sotto-menu p a{
+        visibility: hidden;
+    }
+
+    .container main .colonna .sotto-menu .line{
+        display: none;
+    }
+
+    .container main .colonna .sotto-menu h3 a{
+        visibility: hidden;
+    }
+
+    .container main .colonna .sotto-menu p a img{
+        visibility: visible;
+    }
+
+    .container main .colonna .sotto-menu h3 a img{
+        visibility: visible;
+    }
+
+    .container main .contenuto .box{
+        width: 45%;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .container main .contenuto .brani nav ul li a{
+        font-size: 10px;
+    }
+
+    footer .left, .right{
+        width: 25%;
+    }
+
+    footer .left img{
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    footer .left h4,p {
+        font-size: 8px;
+    }
+
+
+
+}
 
