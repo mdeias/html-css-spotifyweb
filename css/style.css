@@ -360,6 +360,113 @@ footer .center p{
 
 /* RESPONSIVE */
 
+/* L */
+
+@media screen and (max-width: 1130px){
+
+    .container main .contenuto .brani .recenti{
+        justify-content: flex-start;
+    }
+
+    .recenti .box h3 , .consigliati .box h3, .popolari .box h3{
+        font-size: 11px;
+    }
+
+    footer .center .icone-centrali{
+    
+
+
+}
+
+/* MD */
+
+@media screen and (max-width: 992px){
+
+    .container .call-to-action .btn-upgrade{
+        font-size: 10px;
+        padding: 7px 30px;
+        margin-top: 15px;
+    }
+
+    .container main .contenuto h1{
+        font-size: 15px;
+    }
+
+    .container main .contenuto p{
+        font-size: 7px;
+    }
+
+    .container main .contenuto .box{
+        width: 20%;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .recenti .box h3 , .consigliati .box h3, .popolari .box h3{
+        font-size: 9px;
+    }
+
+    .recenti .box p{
+        font-size: 8px;
+    }
+
+    .container main .contenuto .brani nav ul li a{
+        font-size: 10px;
+    }
+
+    footer .left, footer .right{
+        width: 25%;
+    }
+
+    footer .left img{
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    footer .left h4, footer .left p {
+        font-size: 8px;
+    }
+
+
+}
+
+/* S */
+
+@media screen and (max-width:768px){
+    .container main .contenuto .box{
+        width: 45%;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .recenti .box h3 , .consigliati .box h3, .popolari .box h3{
+        font-size: 12px;
+    }
+
+    .recenti .box p{
+        font-size: 10px;
+    }
+
+    .container main .contenuto .brani nav ul li a{
+        font-size: 10px;
+    }
+
+    footer .left, footer .right{
+        width: 25%;
+    }
+
+    footer .left img{
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    footer .left h4, footer .left p {
+        font-size: 8px;
+    }
+}
+
+/* XS */
+
 @media screen and (max-width:576px){
 
     .container main .colonna{
@@ -408,7 +515,11 @@ footer .center p{
         margin-left: 15px;
     }
 
-    .container main .colonna .sotto-menu p, h3{
+    .container main .colonna .sotto-menu p{
+        height: 20px;
+    }
+
+    .container main .colonna .sotto-menu h3 {
         height: 20px;
     }
 
@@ -436,17 +547,11 @@ footer .center p{
         visibility: visible;
     }
 
-    .container main .contenuto .box{
-        width: 45%;
-        margin-right: 15px;
-        margin-bottom: 15px;
-    }
-
     .container main .contenuto .brani nav ul li a{
         font-size: 10px;
     }
 
-    footer .left, .right{
+    footer .left, footer .right{
         width: 25%;
     }
 
@@ -455,11 +560,9 @@ footer .center p{
         margin-right: 10px;
     }
 
-    footer .left h4,p {
+    footer .left h4, footer .left p {
         font-size: 8px;
     }
-
-
 
 }
 
