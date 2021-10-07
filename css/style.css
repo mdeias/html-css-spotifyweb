@@ -50,6 +50,7 @@ p{
 
 .call-to-action{
     position: fixed;
+    z-index: 600;
     top: 0px;
     right: 0px;
     width: calc(100% - 220px);
@@ -171,6 +172,11 @@ footer{
     font-weight: bold;
     margin-right: 5px;
     vertical-align: middle;
+    cursor: pointer;
+}
+
+.colonna .fa-plus:hover{
+    background-color:honeydew;
 }
 
 
@@ -183,6 +189,10 @@ footer{
     border: 2px solid white;
     border-radius: 20px;
     margin: 10px;
+}
+
+.btn-upgrade:hover{
+    transform: scale(1.1);
 }
 
 /* CONTENUTO */
@@ -204,9 +214,9 @@ footer{
 }
 
 .contenuto .brani ul li .green-line{
-    width: 40px;
+    width: 30px;
     height: 3px;
-    margin: 3px auto;
+    margin: 5px auto;
     background-color:greenyellow;
     border: 1px solid greenyellow;
 }
@@ -242,11 +252,50 @@ footer{
     width: 15%;
     text-align: center;
     margin-right: 15px;
+    position: relative;
 }
 
 .contenuto .box img{
     width: 100%;
     cursor: pointer;
+}
+
+/* TENTATIVO PLAY HOVER */
+
+.contenuto .box .playh{
+    width: 100%;
+    visibility: hidden;
+    height: 67%;
+    z-index: 55;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    color: honeydew;
+    font-size: 30px;
+    left: 0;
+    top: 0;
+}
+
+.contenuto .consigliati .box .playh{
+    height: 84%;
+}
+
+.contenuto .popolari .box .playh{
+    height: 84%;
+    border-radius: 50%;
+}
+
+.contenuto .box .fa-play-circle{
+    margin: 40%;
+    color: honeydew;
+    font-size: 30px;
+}
+
+.contenuto .box img:hover{
+    filter: brightness(50%);
+}
+
+.container main .contenuto .brani .recenti .box .playh:hover{
+    visibility: visible;
 }
 
 .contenuto .box h3{
@@ -302,6 +351,11 @@ footer .icone-sinistra i{
     font-size: 15px;
     color: gray;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+footer .icone-sinistra i:hover{
+    color: honeydew;
 }
 
 /* RIGHT */
@@ -310,21 +364,52 @@ footer .right i{
     font-size: 13px;
     color: white;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 footer .right .volume{
     width: 100px;
     height: 3px;
-    border: 1px solid white;
+    border: 1px solid gray;
     border-radius: 10%;
-    background-color: white;
+    background-color: gray;
+    cursor: pointer;
 }
+
+footer .right .bianco{
+    width: 20%;
+    background-color:honeydew;
+    border: 1px solid honeydew;
+}
+
+/* TENTATIVO CERCHIO HOVER */
+
+footer .right .bianco .cerchio{
+    visibility: hidden;
+    margin-left: 30px;
+    right: 0;
+    top: 0px;
+    height: 12px;
+    width: 12px;
+    background-color:honeydew;
+    border-radius: 50%;
+}
+
+
+footer .right .bianco:hover{
+    background-color: greenyellow;
+    border:greenyellow;
+    visibility: visible;
+}
+
+
 
 /* CENTER */
 
 .icone-centrali{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 footer .center i{
@@ -334,15 +419,31 @@ footer .center i{
 }
 
 .barra-riproduzione{
-    width: 80%;
+    width: 30%;
     height: 3px;
-    background-color: #fff;
-    border: 1px solid white;
-    border-radius: 10%;
+    background-color: honeydew;
+    border: 1px solid honeydew;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.center .player .white:hover{
+    background-color:greenyellow;
+    border: greenyellow;
+}
+
+.center .player .grigia{
+    width: 70%;
+    background-color:gray;
+    border: 1px solid gray;
 }
 
 footer .center .fa-play-circle{
     font-size: 30px;
+}
+
+.fa-play-circle:hover{
+    transform: scale(1.2);
 }
 
 .player{
@@ -355,7 +456,6 @@ footer .center .fa-play-circle{
 footer .center p{
     margin: 0px 10px;
 }
-
 
 
 /* RESPONSIVE */
@@ -389,11 +489,11 @@ footer .center p{
     }
 
     .container main .contenuto h1{
-        font-size: 15px;
+        font-size: 19px;
     }
 
     .container main .contenuto p{
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .container main .contenuto .box{
@@ -424,7 +524,7 @@ footer .center p{
     }
 
     footer .left h4, footer .left p {
-        font-size: 8px;
+        font-size: 12px;
     }
 
 
@@ -461,7 +561,7 @@ footer .center p{
     }
 
     footer .left h4, footer .left p {
-        font-size: 8px;
+        font-size: 9px;
     }
 }
 
